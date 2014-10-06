@@ -1,9 +1,11 @@
+
+\c contact_list;
+
 CREATE TABLE categories(
   id serial primary key,
   name varchar(255)
 );
 
-\c contact_list;
 
 CREATE TABLE contacts(
   id serial primary key,
@@ -14,3 +16,6 @@ CREATE TABLE contacts(
   picture text,
   category_id integer
 );
+
+
+INSERT INTO categories (name) VALUES ('Besties')
