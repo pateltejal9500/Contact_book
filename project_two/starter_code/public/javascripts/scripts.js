@@ -297,7 +297,7 @@ function randomApi(){
                             category_id: category
                           },
                           function(data){  
-                           getting(0)
+                          getting(0)
                           getting(1)
                           getting(2) 
       })
