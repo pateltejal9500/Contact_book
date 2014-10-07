@@ -80,7 +80,7 @@ function categoriesAdd(){
   }
 
   if (counter == 3){
-    $(".none").html("<h4>NO CONTACTS YET</h4><button class='new'>NEW CONTACT</button>")
+    $(".none").html("<h4>NO CONTACTS YET</h4><button class='new buttons'>NEW CONTACT</button>")
     newContact()
   } else if (counter != 3){
     $(".none").html("")
@@ -296,11 +296,12 @@ function randomApi(){
                             age:age, 
                             category_id: category
                           },
-                          function(data){   
+                          function(data){  
+                           getting(0)
+                          getting(1)
+                          getting(2) 
       })
-      getting(0)
-      getting(1)
-      getting(2)
+     
     $("#information").html("<h4>" + name.toUpperCase() + " has been ADDED</h4>")
     }
   }
