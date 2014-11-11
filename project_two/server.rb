@@ -1,5 +1,9 @@
+require 'rubygems'
+require 'bundler/setup'
+Bundler.require(:default)
 require 'sinatra'
-require_relative './db/connection'
+# require_relative './db/connection'
+require_relative './config/environments'
 require_relative './lib/category'
 require_relative './lib/contact'
 require 'active_support'
@@ -11,10 +15,6 @@ end
 get ("/") do
   erb(:index)
 end
-
-# before do
-#   content_type :json
-# end
 
 get("/categories") do
   content_type :json
