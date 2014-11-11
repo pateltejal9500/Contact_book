@@ -2,6 +2,7 @@ $(function(){
 
   picture()
 
+
   function picture(){
     $("#marquee").html("<marquee class='banner'>WELCOME TO YOUR INTERNATIONAL PHONEBOOK!!! CLICK THE GLOBE TO CONTINUE!!</marquee")
     $(".picture").html("<a id='enter' href='#'><img class='display' src='http://www.commerce.gov/sites/default/files/images/2011/september/noaa_globe-oceans.jpg' height='500' width='500'></a>")
