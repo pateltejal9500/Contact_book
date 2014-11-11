@@ -29,7 +29,6 @@ end
 post("/categories") do
   content_type :json
   category = Category.create(category_params(params))
-
   category.to_json
 end
 
@@ -75,7 +74,6 @@ delete("/contacts/:id") do
   content_type :json
   contact = Contact.find(params[:id])
   contact.destroy
-
   contact.to_json
 end
 

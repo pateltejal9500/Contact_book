@@ -5,7 +5,7 @@ $(function(){
 
   function picture(){
     $("#marquee").html("<marquee class='banner'>WELCOME TO YOUR INTERNATIONAL PHONEBOOK!!! CLICK THE GLOBE TO CONTINUE!!</marquee")
-    $(".picture").html("<a id='enter' href='#'><img class='display' src='http://www.commerce.gov/sites/default/files/images/2011/september/noaa_globe-oceans.jpg' height='500' width='500'></a>")
+    $(".picture").html("<a id='enter' href='#'><img class='display' src='./images/globe.png' height='500' width='500'></a>")
     $("#enter").click(function(){
       $(".picture").fadeOut("slow", function(){
         $("#marquee").html("")
@@ -56,7 +56,6 @@ $(function(){
             
             if (contacts[i].name == searchWord){
               innards += "<li><a href='#' id='" + contacts[i].id +"' class='contact searchResult'>" +contacts[i].name.toUpperCase() + "</a></li>"
-               console.log(innards)
             }
           }
 
@@ -76,7 +75,6 @@ function categoriesAdd(){
   for (var i = 0; i < list.length; i ++ ){
     if (list[i].children.length == 0){
       counter = counter + 1
-      console.log(counter)
     }
   }
 
@@ -114,6 +112,7 @@ function popover(contacts){
             var pic = "<h4>IMAGE:</h4><p class='picture contact" + contact.id + "'><img src='"+contact.picture + "' width='200' height='200'></p>"
             var innards1 = "<div id='deletePic" + contact.id + "'><img src='https://cdn0.iconfinder.com/data/icons/elite-general/513/trash-can-512.png' height='200' width='200'></div>"
              innards1 += "<br><div id='editPic" + contact.id + "'><img src='http://www.clker.com/cliparts/L/L/X/8/n/R/edit-button-md.png' height='200' width='200'>"
+             innards1 += "<h4>DRAG HERE TO EDIT OR DELETE</h4>"
             $("#information").html(innards)
             $(".button").html(innards1)
             $(".pic").html(pic)
@@ -212,7 +211,6 @@ function randomApi(){
       } else {
         var newData = {}
         newData[classes] = newInfo
-        console.log(newData)
         $.ajax({
           url:'/contacts/' + contact.id,
           type: 'PUT',
