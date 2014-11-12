@@ -7,6 +7,6 @@ Technologies Used: Ruby with Sinatra, JQuery, Javascript, Bootstrap, JQuery UI, 
 
 
 
-[Contact Book][link]
+To View: [Contact Book][link]
 [link]: http://sheltered-crag-6777.herokuapp.com/
 
